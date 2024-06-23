@@ -39,7 +39,7 @@ function statusChangeCallback(response) {  // Called with the results from FB.ge
     FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
       statusChangeCallback(response);        // Returns the login status.
     });
-  };
+
  
   function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
     console.log('Welcome!  Fetching your information.... ');
@@ -53,5 +53,10 @@ function statusChangeCallback(response) {  // Called with the results from FB.ge
 
     FB.AppEvents.logPageView();   
       
-  };
+
+
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+})
+  
 
